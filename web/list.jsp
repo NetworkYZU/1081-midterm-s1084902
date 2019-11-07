@@ -29,7 +29,10 @@
                 例如
                 <tr><td>烤雞腿</td></tr>
                 -->
-                
+              HttpSession session=request.getSession();
+              ArrayList list=(ArrayList) session.getAttribute("foodList");
+             
+              
             </tbody>
         </table>
         <a href="checkout.jsp"><button>Checkout</button></a><br/>
@@ -37,5 +40,6 @@
         question 2 (10%)
         引用 /WEB-INF/footer.jsp
         -->
+        <jsp:include page="/footer.jsp"/>
     </body>
 </html>

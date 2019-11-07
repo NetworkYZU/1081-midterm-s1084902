@@ -13,10 +13,12 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     </head>
     <body>
-        <!--
-        question 4 (10%)
-        將 session 無效化，使其內容完全被清掉
-        -->
+        
+        HttpSession session=request.getSession();
+        ArrayList list=(ArrayList) session.getAttribute("list");
+        if(list!=null){
+        list.clear();
+        }
         訂單已收到！<a href="index.html">回首頁</a>
        
     </body>
